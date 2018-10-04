@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+index.zul
+
+{{IS_NOTE
+	Purpose:
+		
+	Description:
+		
+	History:
+		Mon Jun 12 21:23:35     2006, Created by tomyeh
+		Fri May 01 04:36:35     2009, Modified by stera
+}}IS_NOTE
+
+Copyright (C) 2006 Potix Corporation. All Rights Reserved.
+
+{{IS_RIGHT
+}}IS_RIGHT
+-->
+<zk xmlns="http://www.zkoss.org/2005/zul">
+    <window id="win2"  onCreate="win2.oncreatemethod()" use="Controlador.personaControlador"   >
+        <html><![CDATA[ <br/><br/><center> ]]>    </html>
+        
+        <panel id="p1" visible="true" title="Formulario persona" width="95%"  >
+            <panelchildren>
+                <grid>
+                    <rows>
+                        <row>
+                            <cell width="90px">
+                                <label value="Cedula"/>
+                            </cell>
+                            <cell width="25%">
+                                <textbox id="documento"   width="50%" value="@{win2.personaDTO.documento}"/>
+                            </cell>
+                        </row>
+                        <row>
+                            <cell width="90px">
+                                <label value="Nombre"/>
+                            </cell>
+                            <cell width="25%">
+                                <textbox id="nombre" width="50%" value="@{win2.personaDTO.nombre}"/>
+                            </cell>
+                        </row>
+                        <row>
+                            <cell width="90px">
+                                <label value="Telefono"/>
+                            </cell>
+                            <cell width="25%">
+                                <textbox id="telefono"   width="50%" value="@{win2.personaDTO.telefono}"/>
+                            </cell>
+                        </row>
+                        <row>
+                            <cell width="90px">
+                                <label value="Dirección"/>
+                            </cell>
+                            <cell width="25%">
+                                <textbox id="direccion"   width="50%" value="@{win2.personaDTO.direccion}"/>
+                            </cell>
+                        </row>
+                        <row>
+                            <cell>
+                                <button id="botonINS"      label="Insertar"         visible="true"  
+                                        onClick="win2.insertar()">     
+                                </button>
+                                <button id="botonBOR"      label="Eliminar persona"         visible="true"  
+                                        onClick="win2.borrar()">     
+                                </button>
+                                <button id="botonSE1"      label="Buscar Persona"         visible="true"  
+                                        onClick="win2.consultar()">     
+                                </button>
+                                <button id="botonAC"      label="Actualiza"         visible="true"  
+                                        onClick="win2.actualiza()">     
+                                </button>
+                                <button id="botonELI"      label="Limpiar"         visible="true"  
+                                        onClick="win2.limpia()">     
+                                </button>
+                            </cell>
+                        </row>
+                    </rows>
+                </grid>
+            </panelchildren>
+        </panel>
+    </window>
+</zk>
